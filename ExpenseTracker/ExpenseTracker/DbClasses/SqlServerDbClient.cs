@@ -98,7 +98,6 @@ namespace ExpenseTracker.DbClasses
                     command.Connection.Open();
                     command.CommandType = CommandType.StoredProcedure;
 
-                        // This implements parameterized query
                     command.Parameters.Add("@item", SqlDbType.NVarChar, 30).Value = transaction.itemName;
                     command.Parameters.Add("@qty", SqlDbType.Int).Value = transaction.qty;
                     command.Parameters.Add("@amount", SqlDbType.Decimal, 18).Value = transaction.amount;

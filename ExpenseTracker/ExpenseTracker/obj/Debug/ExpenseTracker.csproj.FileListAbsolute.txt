@@ -34,3 +34,15 @@ C:\Users\Stephen\Documents\Visual Studio 2013\Projects\Self Projects\Backup\2017
 C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\bin\Debug\ExpenseTracker.exe.config
 C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.exe
 C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.pdb
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\bin\Debug\ExpenseTracker.exe
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\bin\Debug\ExpenseTracker.pdb
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.csprojResolveAssemblyReference.cache
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\MainWindow.baml
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\NewEstablishmentDialog.baml
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\MainWindow.g.cs
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\NewEstablishmentDialog.g.cs
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\App.g.cs
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker_MarkupCompile.cache
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.g.resources
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.Properties.Resources.resources
+C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.csproj.GenerateResource.Cache
