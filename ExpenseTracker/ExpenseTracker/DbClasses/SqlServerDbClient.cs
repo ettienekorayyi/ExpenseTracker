@@ -34,7 +34,8 @@ namespace ExpenseTracker.DbClasses
                     database.Open();
 
                     command.CommandType = CommandType.StoredProcedure; ;
-                    command.CommandText = Constants.ShowTransactionHistory;
+                    command.CommandText = Constants.ShowTransactionHistories;
+                    //command.Parameters.Add("@pk", SqlDbType.NVarChar, 30).Value = transactionHistory.PrimaryKey;
 
                     using (IDataReader reader = command.ExecuteReader())
                     {

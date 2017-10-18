@@ -33,11 +33,9 @@ namespace ExpenseTracker
 
     public partial class MainWindow : Window
     {
-        //public static ListView listview { get; set; }
         private static ComboBox comboBox { get; set; }
         private static DateTime? date { get; set; }
         private int? establishment_Id { get; set; }
-        private string store { get; set; }
         private DatePicker picker { get; set; }
         private TransactionHistory transaction { get; set; }
 
@@ -56,7 +54,7 @@ namespace ExpenseTracker
             comboBox = sender as ComboBox;
             this.RefreshComboBox();
         }
-        //done
+
         private void historyListView_Loaded(object sender, RoutedEventArgs e)
         {
             historyListView.ItemsSource = new Utility()
@@ -64,17 +62,15 @@ namespace ExpenseTracker
                  Constants.SqlServerConnection);
         }
 
-        internal void CustomRefresh()// Refactor
+        private void CustomRefresh()
         {
             this.RefreshComboBox();
             historyListView.ItemsSource = new Utility()
                 .UseTransactionHistory(Constants.SqlServerClient.ToString(),
                  Constants.SqlServerConnection);
-            
-
         }
 
-        internal void RefreshComboBox()
+        public void RefreshComboBox()
         {
             comboBox.ItemsSource = new Utility()
                 .UseEstablishment(Constants.SqlServerClient.ToString(),
@@ -90,9 +86,6 @@ namespace ExpenseTracker
             }
             else
             {
-                // get the pk id of the selected item
-                // pass that id to stored proc
-                
                 establishmentCbox.Text = comboBox.SelectedItem.ToString();
                 establishment_Id = ((Establishment)comboBox.SelectedItem).HiddenValue;
             }
