@@ -5,26 +5,37 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Data;
-using ExpenseTracker.FactoryPattern;
 using ExpenseTracker.Model;
 using System.Windows;
 using System.Configuration;
-using ExpenseTracker.DbClasses;
+using ExpenseTracker.Classes;
+using ExpenseTracker.Interfaces;
 
 namespace ExpenseTracker.Common
 {
     public class Utility
     {
         public IDbConnection connection { get; private set; }
+        private ISqlServerDbClient _sqlServerDbClient;
+        
+
+        public Utility(ISqlServerDbClient sqlServerDbClient = null)
+        {
+            _sqlServerDbClient = sqlServerDbClient ?? new SqlServerDbClient();
+            
+        }
 
         public List<TransactionHistory> UseTransactionHistory(string dbType, string connectionString)
         {
-
+            var configurationManager = ConfigurationManager.ConnectionStrings[connectionString];
             connection = new DbSelectorFactory().CreateDbClasses(dbType)
-                .ConnectToDatabase(ConfigurationManager.ConnectionStrings[connectionString]);
+                .ConnectToDatabase(configurationManager);
+
             connection.ConnectionString = ConfigurationManager.ConnectionStrings[connectionString]
                 .ConnectionString;
-            return new SqlServerDbClient().ViewTransactionRecords(connection);
+
+            var result = _sqlServerDbClient.ViewTransactionRecords(connection);
+            return result;
         }
 
         public void TransactionHistoryUpdate(string dbType, string connectionString,
@@ -35,8 +46,8 @@ namespace ExpenseTracker.Common
                 .ConnectToDatabase(ConfigurationManager.ConnectionStrings[connectionString]);
             connection.ConnectionString = ConfigurationManager.ConnectionStrings[connectionString]
                 .ConnectionString;
-            
-            new SqlServerDbClient().UpdateDataFromTransaction(connection, history);
+
+            _sqlServerDbClient.UpdateDataFromTransaction(connection, history);
         }
 
         public void TransactionHistoryDelete(string dbType, string connectionString,
@@ -47,7 +58,8 @@ namespace ExpenseTracker.Common
                 .ConnectToDatabase(ConfigurationManager.ConnectionStrings[connectionString]);
             connection.ConnectionString = ConfigurationManager.ConnectionStrings[connectionString]
                 .ConnectionString;
-            new SqlServerDbClient().DeleteDataFromTransaction(connection, primaryKey);
+
+            _sqlServerDbClient.DeleteDataFromTransaction(connection, primaryKey);
         }
 
         public void TransactionHistoryCreate(string dbType, string connectionString,
@@ -58,7 +70,8 @@ namespace ExpenseTracker.Common
                 .ConnectToDatabase(ConfigurationManager.ConnectionStrings[connectionString]);
             connection.ConnectionString = ConfigurationManager.ConnectionStrings[connectionString]
                 .ConnectionString;
-            new SqlServerDbClient().InsertDataToTransaction(connection, transaction);
+
+            _sqlServerDbClient.InsertDataToTransaction(connection, transaction);
         }
 
         // Establishments
@@ -69,7 +82,9 @@ namespace ExpenseTracker.Common
                 .ConnectToDatabase(ConfigurationManager.ConnectionStrings[connectionString]);
             connection.ConnectionString = ConfigurationManager.ConnectionStrings[connectionString]
                 .ConnectionString;
-            return new SqlServerDbClient().ViewEstablishments(connection);
+
+            var result = _sqlServerDbClient.ViewEstablishments(connection);
+            return result;
         }
 
         public void CreateNewEstablishment(string dbType, string connectionString,string paramOne, string paramTwo)
@@ -78,7 +93,8 @@ namespace ExpenseTracker.Common
                 .ConnectToDatabase(ConfigurationManager.ConnectionStrings[connectionString]);
             connection.ConnectionString = ConfigurationManager.ConnectionStrings[connectionString]
                 .ConnectionString;
-            new SqlServerDbClient().InsertDataToEstablishment(connection, paramOne, paramTwo);
+
+            _sqlServerDbClient.InsertDataToEstablishment(connection, paramOne, paramTwo);
         }
 
 

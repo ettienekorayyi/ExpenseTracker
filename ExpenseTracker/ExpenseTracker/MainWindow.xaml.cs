@@ -20,9 +20,7 @@ using System.Collections.Specialized;
 using System.Data.SqlClient;
 
 using ExpenseTracker.Model;
-using ExpenseTracker.FactoryPattern;
-
-using ExpenseTracker.DbClasses;
+using ExpenseTracker.Classes;
 
 namespace ExpenseTracker
 {
@@ -33,15 +31,18 @@ namespace ExpenseTracker
 
     public partial class MainWindow : Window
     {
-        private static ComboBox comboBox { get; set; }
-        private static DateTime? date { get; set; }
-        private int? establishment_Id { get; set; }
-        private DatePicker picker { get; set; }
-        private TransactionHistory transaction { get; set; }
+        public static ComboBox comboBox { get; set; }
+        public static DateTime? date { get; set; }
+        public int? establishment_Id { get; set; }
+        public DatePicker picker { get; set; }
+        public TransactionHistory transaction { get; set; }
+
+        private Utility _utility;
 
         public MainWindow()
         {
             InitializeComponent();
+            _utility = new Utility();
         }
 
         private void btnNew_Click(object sender, RoutedEventArgs e)
@@ -57,7 +58,7 @@ namespace ExpenseTracker
 
         private void historyListView_Loaded(object sender, RoutedEventArgs e)
         {
-            historyListView.ItemsSource = new Utility()
+            historyListView.ItemsSource = _utility
                 .UseTransactionHistory(Constants.SqlServerClient.ToString(),
                  Constants.SqlServerConnection);
         }
@@ -65,14 +66,14 @@ namespace ExpenseTracker
         private void CustomRefresh()
         {
             this.RefreshComboBox();
-            historyListView.ItemsSource = new Utility()
+            historyListView.ItemsSource = _utility
                 .UseTransactionHistory(Constants.SqlServerClient.ToString(),
                  Constants.SqlServerConnection);
         }
 
         public void RefreshComboBox()
         {
-            comboBox.ItemsSource = new Utility()
+            comboBox.ItemsSource = _utility
                 .UseEstablishment(Constants.SqlServerClient.ToString(),
                  Constants.SqlServerConnection);
             comboBox.SelectedIndex = -1;
@@ -104,7 +105,7 @@ namespace ExpenseTracker
             {
                 string id = transaction.primaryKey;
 
-                new Utility().TransactionHistoryUpdate
+                _utility.TransactionHistoryUpdate
                 (
                    Constants.SqlServerClient.ToString(),
                    Constants.SqlServerConnection,
@@ -125,7 +126,6 @@ namespace ExpenseTracker
 
                 btnCreate.Visibility = Visibility.Visible;
                 this.CustomRefresh();
-                
                 this.Clear();
             }
             catch(System.InvalidOperationException invalidUpdateOperation)
@@ -142,7 +142,7 @@ namespace ExpenseTracker
         {
             try
             {
-                new Utility().TransactionHistoryDelete(Constants.SqlServerClient.ToString(),
+                _utility.TransactionHistoryDelete(Constants.SqlServerClient.ToString(),
                    Constants.SqlServerConnection,int.Parse(transaction.primaryKey));
 
                 btnCreate.Visibility = Visibility.Visible;
@@ -165,7 +165,7 @@ namespace ExpenseTracker
         {
             try
             {
-                new Utility().TransactionHistoryCreate
+                _utility.TransactionHistoryCreate
                 (
                    Constants.SqlServerClient.ToString(),
                    Constants.SqlServerConnection,
@@ -213,7 +213,7 @@ namespace ExpenseTracker
             datePckr.Text = null;
             establishment_Id = null;
         }
-        //
+        
         private void historyListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             btnCreate.Visibility = Visibility.Hidden;

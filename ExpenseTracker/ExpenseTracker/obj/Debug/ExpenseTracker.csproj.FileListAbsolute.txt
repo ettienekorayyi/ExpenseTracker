@@ -46,3 +46,19 @@ C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\o
 C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.g.resources
 C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.Properties.Resources.resources
 C:\Users\Stephen\Documents\GitHub\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.csproj.GenerateResource.Cache
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\bin\Debug\ExpenseTracker.exe.config
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\bin\Debug\ExpenseTracker.exe
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\bin\Debug\ExpenseTracker.pdb
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\MainWindow.baml
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\NewEstablishmentDialog.baml
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\MainWindow.g.cs
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\NewEstablishmentDialog.g.cs
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\App.g.cs
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker_MarkupCompile.cache
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.g.resources
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.Properties.Resources.resources
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.csproj.GenerateResource.cache
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.csproj.CoreCompileInputs.cache
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.exe
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.pdb
+C:\Users\Stephen\Documents\Visual Studio 2019\Projects\ExpenseTracker\ExpenseTracker\ExpenseTracker\obj\Debug\ExpenseTracker.csprojAssemblyReference.cache

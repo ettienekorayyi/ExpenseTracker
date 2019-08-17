@@ -8,8 +8,6 @@ namespace ExpenseTracker.Model
 {
     public class Establishment
     {
-        //public static List<Establishment> Establishments { get; set; }
-
         public int EstablishmentId { get; set; }
         public string establishments { get; set; }
 

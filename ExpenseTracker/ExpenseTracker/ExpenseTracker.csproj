@@ -55,9 +55,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Common\Utility.cs" />
-    <Compile Include="DbClasses\SqlServerDbClient.cs" />
-    <Compile Include="FactoryPattern\DbSelectorFactory.cs" />
+    <Compile Include="Classes\SqlServerDbClient.cs" />
+    <Compile Include="Classes\DbSelectorFactory.cs" />
     <Compile Include="Interfaces\IDbCustomConnector.cs" />
+    <Compile Include="Interfaces\ISqlServerDbClient.cs" />
     <Compile Include="Model\Establishment.cs" />
     <Compile Include="Model\TransactionHistory.cs" />
     <Page Include="MainWindow.xaml">
